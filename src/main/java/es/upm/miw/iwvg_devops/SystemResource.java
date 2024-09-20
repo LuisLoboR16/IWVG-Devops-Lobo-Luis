@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg_devops.rest;
+package es.upm.miw.iwvg_devops;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
