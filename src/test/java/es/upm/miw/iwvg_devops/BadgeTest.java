@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg_devops.rest;
+package es.upm.miw.iwvg_devops;
 
 import org.junit.jupiter.api.Test;
 
