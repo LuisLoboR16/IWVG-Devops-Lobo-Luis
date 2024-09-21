@@ -21,13 +21,14 @@ public class Searches {
                 .orElse(null);
     }
 
-    public Stream<String> findUserIdByAllProperFraction() {
+    public Stream<String> findUserNameBySomeImproperFraction() {
         return new UsersDatabase().findAll()
                 .filter(user -> user.getFractions().stream()
-                        .anyMatch(Fraction::isProper))
+                        .anyMatch(Fraction::isImproper))
                 .map(User::getName)
                 .distinct();
     }
+
     public Stream<String> findUserFamilyNameBySomeImproperFraction() {
         return new UsersDatabase().findAll()
                 .filter(user -> user.getFractions().stream()

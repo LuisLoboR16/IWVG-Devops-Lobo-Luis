@@ -15,14 +15,17 @@ class SearchesTest {
         assertEquals(2, fraction.getNumerator());
         assertEquals(1, fraction.getDenominator());
     }
+
     @Test
-    void findUserIdByAllProperFraction() {
-        assertEquals(List.of("1", "2", "3"), new Searches().findUserIdByAllProperFraction()
+    void testFindUserNameBySomeImproperFraction() {
+        assertEquals(List.of("Oscar", "Ana", "Paula"), new Searches().findUserNameBySomeImproperFraction()
                 .collect(Collectors.toList()));
     }
+
     @Test
     void testFindUserFamilyNameBySomeImproperFraction() {
-        assertEquals(List.of("Lobo", "Reyes", "Mendoza", "Montano"), new Searches().findUserFamilyNameBySomeImproperFraction()
+        assertEquals(List.of("Fernandez", "Blanco", "López", "Torres"), new Searches().findUserFamilyNameBySomeImproperFraction()
                 .collect(Collectors.toList()));
     }
+
 }
