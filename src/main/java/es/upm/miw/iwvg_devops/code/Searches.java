@@ -36,4 +36,11 @@ public class Searches {
                 .map(User::getFamilyName)
                 .distinct();
     }
+    public Stream<String> findUserFamilyNameInitialBySomeProperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(Fraction::isProper))
+                .map(user -> user.getFamilyName().substring(0, 1))
+                .distinct();
+    }
 }
