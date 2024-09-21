@@ -15,4 +15,9 @@ class SearchesTest {
         assertEquals(2, fraction.getNumerator());
         assertEquals(1, fraction.getDenominator());
     }
+    @Test
+    void findUserIdByAllProperFraction() {
+        assertEquals(List.of("1", "2", "3"), new Searches().findUserIdByAllProperFraction()
+                .collect(Collectors.toList()));
+    }
 }

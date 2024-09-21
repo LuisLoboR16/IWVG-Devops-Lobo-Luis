@@ -20,4 +20,12 @@ public class Searches {
                 .findFirst()
                 .orElse(null);
     }
+
+    public Stream<String> findUserIdByAllProperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(Fraction::isProper))
+                .map(User::getName)
+                .distinct();
+    }
 }
